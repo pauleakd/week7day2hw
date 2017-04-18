@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CountingWords</string>
+    <string name="enter">Please enter your text</string>
+    <string name="button_text">Submit</string>
+</resources>
