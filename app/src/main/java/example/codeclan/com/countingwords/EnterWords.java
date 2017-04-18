@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.HashMap;
+
 public class EnterWords extends AppCompatActivity {
 
     private EditText textEditText;
     private Button entertextButton;
     private Words words;
+    private HashMap hash_count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,13 @@ public class EnterWords extends AppCompatActivity {
 
         words = new Words(sentence);
         int words_count = words.wordCount();
+        hash_count = words.countInHash();
+        String hash_count_string = hash_count.toString();
 
         Intent intent = new Intent(this, CountActivity.class);
         intent.putExtra("sentence", sentence);
         intent.putExtra("count", words_count);
+        intent.putExtra("countHash", hash_count_string);
         startActivity(intent);
 
 

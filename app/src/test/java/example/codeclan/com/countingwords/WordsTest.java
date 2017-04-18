@@ -31,6 +31,15 @@ public class WordsTest {
 
 
     }
+    @Test
+    public void testCountsinHash2(){
+        Words words = new Words("it was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity");
+        HashMap hashed_words = words.countInHash();
+        System.out.print(hashed_words.toString());
+        assertEquals(6, hashed_words.get("it"));
+
+
+    }
 }
 
 

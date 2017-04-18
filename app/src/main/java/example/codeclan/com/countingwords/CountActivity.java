@@ -41,5 +41,11 @@ public class CountActivity extends AppCompatActivity {
 
         count_to_display.setText(countString);
 
+        String countHashString = extras.getString("countHash");
+
+        count_to_display = (TextView) findViewById(R.id.count_hash_to_display);
+
+        count_to_display.setText(countHashString);
+
     }
 }
